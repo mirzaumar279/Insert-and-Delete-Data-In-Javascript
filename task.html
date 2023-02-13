@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+<link rel="manifest" href="favicon/site.webmanifest">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="theme-color" content="#ffffff">
+    <title>Task</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+    <script src="ss.js"></script>
+    <style>
+        #btnadd td input{
+    width: 100%;
+    background-color: green;
+    color: white;
+    font-size: 30px;
+    font-family: georgia;
+    font-weight: bold;
+    border: 5px solid #014b01;
+    border-radius: 10px;
+}
+#image {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="h">--------------------------</h1>
+    <h1 class="h">CHACHA STORE</h1>
+    <h1 class="h">--------------------------</h1>
+        <center>
+            <table border="4" style="margin-top: 45px;">
+                <tr>
+                    <th class="inputtable">Items Name</th>
+                <td><input class="form form-control" type="text" name="text1" id="first"></td>
+            </tr>
+            <tr >
+            <th class="inputtable">Quentity</th>
+            <td><input class="form form-control" type="number" name="text2" id="second" value="0" onclick="multiply()"></td>
+                </tr>
+            <tr >
+                    <th class="inputtable">Price</th>
+                    <td><input class="form form-control" type="text" name="text3" id="third" value="0" onclick="multiply()"></td>
+                </tr>
+            <tr >
+                    <th class="inputtable">Item Total</th>
+                    <td><input class="form form-control" type="text" name="item_total" id="forth"></td>
+                </tr>
+                <tr>
+                     <td colspan="2">
+                    <input type='file' id="img" class="img" name="img" onchange="loadFile1(event)" style="font-size: 25px;">   
+                </tr>
+                <tr id="btnadd">
+                    <td colspan="2"><input type="button" name="button" value="Add" onclick="addOnClick()"></td>
+                </tr>
+
+
+    
+      </table>
+</center>
+
+ <h1 class="h1">Search Bar</h1>
+<div style="margin-top: 30px; margin-left: 210px;">
+    <input type="text" id="ini" onkeyup="search0()" placeholder="Serial Number" size="20" style="height: 50px; font-size:20px; font-family: georgia; width: 195px;" class="icon">
+    <input type="text" id="ini1" onkeyup="search1()" placeholder="Items Name" size="20" style="height: 50px; font-size:20px; font-family: georgia; margin-left: 60px; width: 195px;"class="icon">
+    <input type="text" id="ini2" onkeyup="search2()" placeholder="Quantity" size="20" style="height: 50px; font-size:20px; font-family: georgia;margin-left: 60px; width: 195px;"class="icon">
+    <input type="text" id="ini3" onkeyup="search3()" placeholder="Price" size="20" style="height: 50px; font-size:20px; font-family: georgia;margin-left: 60px; width: 195px;"class="icon">
+    <input type="text" id="ini4" onkeyup="search4()" placeholder="Item Total" size="20" style="height: 50px; font-size:20px; font-family: georgia; margin-left: 60px; width: 195px;"class="icon">
+</div>
+
+    <div class="container">
+
+        <div id="table"></div>
+
+</body>
+</html>
